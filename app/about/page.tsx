@@ -49,7 +49,7 @@ function Item({ title, children }: { title: string; children: ReactNode }) {
 function Wire({ title, verdict, children }: { title: string; verdict: string; children: ReactNode }) {
   return (
     <figure className="card flex flex-col gap-3 p-4">
-      <div aria-hidden className="rounded-sm border border-dashed border-line-strong bg-bg p-3 text-[10px] leading-tight text-dim">
+      <div aria-hidden className="rounded-sm border border-dashed border-line-strong bg-bg p-3 text-[10px] leading-tight text-muted">
         {children}
       </div>
       <figcaption>
@@ -59,8 +59,8 @@ function Wire({ title, verdict, children }: { title: string; verdict: string; ch
     </figure>
   );
 }
-const Box = ({ className = "", children }: { className?: string; children?: ReactNode }) => (
-  <div className={`rounded-xs border border-line-strong bg-raised px-1.5 py-1 ${className}`}>{children}</div>
+const Box = ({ className = "", dark = false, children }: { className?: string; dark?: boolean; children?: ReactNode }) => (
+  <div className={`rounded-xs border px-1.5 py-1 ${dark ? "border-ink bg-ink text-bg" : "border-line-strong bg-raised"} ${className}`}>{children}</div>
 );
 
 const SWATCHES = [
@@ -223,7 +223,7 @@ export default function About() {
               <Box>How often do you see a doctor? ○ Rarely ○ Sometimes ● Often</Box>
               <Box>Any regular prescriptions? ● Yes ○ No</Box>
               <Box>Expecting a big event? ○ Yes ● No</Box>
-              <Box className="bg-ink text-bg">We recommend: Silver Classic →</Box>
+              <Box dark>We recommend: Silver Classic →</Box>
             </div>
           </Wire>
           <Wire title="B. Good / Better / Best" verdict="A curated trio. Lost because with a fixed budget 'Best' is often over the budget, and hiding the rest of the market makes the price-surprise complaints worse. Thatch is the agent of record across the market; the list has to be the list.">

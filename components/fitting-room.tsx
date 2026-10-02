@@ -43,9 +43,12 @@ function Flow({ persona, sourceNote, onSwitch }: { persona: Persona; sourceNote:
   const [events, setEvents] = useState<string[]>(persona.defaultEvents);
   const [sort, setSort] = useState<SortKey>("fit");
   const [pickId, setPickId] = useState<string | null>(null);
+  // First paint is server-rendered and must not wait for JS; only step changes animate in.
+  const [stepped, setStepped] = useState(false);
 
   const go = useCallback((s: StepId) => {
     setStep(s);
+    setStepped(true);
     setReached((r) => (r.includes(s) ? r : [...r, s]));
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
@@ -55,12 +58,13 @@ function Flow({ persona, sourceNote, onSwitch }: { persona: Persona; sourceNote:
   const ranked = useMemo(() => rankPlans(file.plans, utilization, persona.budget, sort), [file, utilization, persona.budget, sort]);
   const pick = ranked.find((r) => r.plan.id === pickId) ?? null;
   const idx = ORDER.indexOf(step);
+  const animateIn = stepped && !reduce;
 
   return (
     <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pt-6 pb-24 sm:px-6">
       <Stepper current={step} reached={reached} onGo={go} />
       {/* Enter only, no exit: the next step should never wait on the last one. */}
-      <motion.div key={step} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}>
+      <motion.div key={step} initial={animateIn ? { opacity: 0, y: 10 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}>
           {step === "budget" && <BudgetStep persona={persona} confirmed={confirmed} onConfirm={() => setConfirmed(true)} onContinue={() => go("tryon")} />}
           {step === "tryon" && (
             <TryOnStep

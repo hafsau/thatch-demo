@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
 import type { Persona } from "@/lib/personas";
 import { usd } from "@/lib/cost/estimate";
 import { Term } from "@/components/term-tip";
@@ -16,7 +15,6 @@ export function BudgetStep({
   onConfirm: () => void;
   onContinue: () => void;
 }) {
-  const reduce = useReducedMotion();
   const first = persona.name.split(" ")[0] === "The" ? persona.name : persona.name;
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-14">
@@ -24,14 +22,7 @@ export function BudgetStep({
         <p className="eyebrow">Step 1 of 5</p>
         <h1 className="display text-5xl sm:text-6xl">
           {first}, your employer gives you{" "}
-          <motion.span
-            initial={reduce ? false : { opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="inline-block whitespace-nowrap text-brand"
-          >
-            {usd(persona.budget)}
-          </motion.span>{" "}
+          <span className="whitespace-nowrap text-brand">{usd(persona.budget)}</span>{" "}
           a month for health.
         </h1>
         <p className="max-w-[52ch] text-lg leading-relaxed text-muted">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import type { RefObject } from "react";
 import { usd, type RankedPlan } from "@/lib/cost/estimate";
 import type { Persona } from "@/lib/personas";
 import type { CostShare } from "@/lib/plans/types";
@@ -28,29 +28,24 @@ function Row({ label, cells, strong = false }: { label: React.ReactNode; cells: 
   );
 }
 
+/**
+ * A native <dialog>. The parent holds the ref and calls showModal() in the
+ * click handler, so opening never depends on an effect running.
+ */
 export function CompareDialog({
-  open,
+  ref,
   a,
   b,
   persona,
-  onClose,
   onChoose,
 }: {
-  open: boolean;
+  ref: RefObject<HTMLDialogElement | null>;
   a: RankedPlan | null;
   b: RankedPlan | null;
   persona: Persona;
-  onClose: () => void;
   onChoose: (id: string) => void;
 }) {
-  const ref = useRef<HTMLDialogElement>(null);
-  useEffect(() => {
-    const d = ref.current;
-    if (!d) return;
-    if (open && !d.open) d.showModal();
-    if (!open && d.open) d.close();
-  }, [open]);
-
+  const onClose = () => ref.current?.close();
   if (!a || !b) return null;
   const pair = [a, b];
   const cheaperYear = a.estimate.yearlyTotal <= b.estimate.yearlyTotal ? a : b;
@@ -59,7 +54,6 @@ export function CompareDialog({
   return (
     <dialog
       ref={ref}
-      onClose={onClose}
       onClick={(e) => {
         if (e.target === ref.current) onClose();
       }}

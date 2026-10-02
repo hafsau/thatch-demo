@@ -17,7 +17,15 @@ export function EnrolledStep({ persona, pick, onRestart }: { persona: Persona; p
     { title: "Enrolled", when: "Today", detail: `Thatch sent your application to ${pick.plan.issuer}.`, state: "done" },
     { title: "Carrier is processing", when: "3–5 business days", detail: "This is the quiet part. We'll tell you when it ends, so you don't have to wonder.", state: "now" },
     { title: "Member ID issued", when: "By Dec 15", detail: "Your ID lands here and in the app. Pharmacies can use it before the card arrives.", state: "next" },
-    { title: "Thatch Card ships", when: "Arrives before Jan 1", detail: `Your card loads ${pick.estimate.monthlyLeft > 0 ? usd(pick.estimate.monthlyLeft) : "$0"} on the first of each month.`, state: "next" },
+    {
+      title: "Thatch Card ships",
+      when: "Arrives before Jan 1",
+      detail:
+        pick.estimate.monthlyLeft > 0
+          ? `Your card loads ${usd(pick.estimate.monthlyLeft)} on the first of each month.`
+          : "Your premium uses your whole budget this year, so the card arrives with no monthly balance. It still works for Thatch Market deals.",
+      state: "next",
+    },
     { title: "Coverage starts", when: "Jan 1", detail: "First premium paid by Thatch on your behalf. You're covered.", state: "next" },
   ];
 

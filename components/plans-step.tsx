@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { RankedPlan, SortKey } from "@/lib/cost/estimate";
 import { EVENTS, type Persona } from "@/lib/personas";
 import { CompareDialog } from "@/components/compare-dialog";
@@ -35,7 +35,7 @@ export function PlansStep({
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [compare, setCompare] = useState<string[]>([]);
-  const [cmpOpen, setCmpOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const byFit = [...ranked].sort((a, b) => a.estimate.yearlyTotal - b.estimate.yearlyTotal);
   const best = byFit[0];
@@ -114,7 +114,6 @@ export function PlansStep({
         </ol>
 
         <div className="lg:sticky lg:top-20 flex flex-col gap-3">
-          <LedgerPanel persona={persona} focus={focus} label={label} />
           <div className="card flex flex-col gap-2 p-4">
             <p className="eyebrow eyebrow-quiet">Compare</p>
             {compare.length === 0 && <p className="text-sm text-muted">Pick two plans to see them side by side, with the arithmetic.</p>}
@@ -138,24 +137,24 @@ export function PlansStep({
             <button
               type="button"
               disabled={compare.length < 2}
-              onClick={() => setCmpOpen(true)}
+              onClick={() => dialogRef.current?.showModal()}
               className="btn btn-dark btn-sm mt-1 w-full"
             >
               Compare {compare.length === 2 ? "these two" : `(${compare.length}/2)`}
             </button>
           </div>
+          <LedgerPanel persona={persona} focus={focus} label={label} />
           <p className="px-1 text-xs leading-relaxed text-dim">{sourceNote}. Estimates, not quotes.</p>
         </div>
       </div>
 
       <CompareDialog
-        open={cmpOpen}
+        ref={dialogRef}
         a={a}
         b={b}
         persona={persona}
-        onClose={() => setCmpOpen(false)}
         onChoose={(id) => {
-          setCmpOpen(false);
+          dialogRef.current?.close();
           onChoose(id);
         }}
       />
