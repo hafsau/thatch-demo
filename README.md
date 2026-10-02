@@ -1,6 +1,6 @@
 # Fitting Room
 
-**▶ Live: [thatch-demo.vercel.app](https://thatch-demo.vercel.app)** · [Case study](https://thatch-demo.vercel.app/about) · [Plan card spec](https://thatch-demo.vercel.app/docs/plan-card)
+**▶ Live: [thatch-demo-navy.vercel.app](https://thatch-demo-navy.vercel.app)** · [Case study](https://thatch-demo-navy.vercel.app/about) · [Plan card spec](https://thatch-demo-navy.vercel.app/docs/plan-card)
 
 **Try a health plan on before you buy it.** An unofficial product design concept for [Thatch](https://thatch.com) by [Hafsa Usmani](https://hafsausmani.com), built as my application for the Product Designer role.
 
@@ -14,7 +14,7 @@ Thatch gives every employee a monthly health budget. They pick their own plan, a
 
 Every marketplace sells on monthly premium. Fitting Room ranks plans by estimated yearly cost for *your* year (your doctors, your prescriptions, what's likely to happen) and keeps a live ledger of budget → premium → left on your card as you compare.
 
-The full reasoning, the explorations that lost, and the limits are on the **[case study page](https://thatch-demo.vercel.app/about)**.
+The full reasoning, the explorations that lost, and the limits are on the **[case study page](https://thatch-demo-navy.vercel.app/about)**.
 
 ## The flow
 

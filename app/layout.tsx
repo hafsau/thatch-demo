@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: { default: "Fitting Room: try a health plan on before you buy it", template: "%s · Fitting Room" },
   description:
     "An unofficial product design concept for Thatch by Hafsa Usmani. Pick a health plan by what the year will really cost, not the monthly premium, and see what's left for your care.",
-  metadataBase: new URL("https://thatch-demo.vercel.app"),
+  metadataBase: new URL("https://thatch-demo-navy.vercel.app"),
 };
 
 export const viewport: Viewport = { themeColor: "#fcfbf8", colorScheme: "light" };
