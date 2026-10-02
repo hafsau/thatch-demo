@@ -1,0 +1,755 @@
+{
+  "personaId": "okafors",
+  "source": "representative",
+  "planYear": 2026,
+  "plans": [
+    {
+      "id": "oh-cs-brz",
+      "issuer": "CareSource",
+      "name": "Marketplace Bronze First",
+      "metal": "Expanded Bronze",
+      "type": "HMO",
+      "premium": 1268,
+      "deductible": 15000,
+      "oopMax": 18400,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 2,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "out",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-ant-brz",
+      "issuer": "Anthem",
+      "name": "Bronze Pathway X 7500",
+      "metal": "Bronze",
+      "type": "HMO",
+      "premium": 1312,
+      "deductible": 15000,
+      "oopMax": 18400,
+      "hsaEligible": true,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "specialist": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "emergency": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-amb-brz",
+      "issuer": "Ambetter from Buckeye",
+      "name": "Everyday Bronze",
+      "metal": "Expanded Bronze",
+      "type": "HMO",
+      "premium": 1245,
+      "deductible": 14800,
+      "oopMax": 18400,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "out",
+        "walsh": "out"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-mm-brz",
+      "issuer": "Medical Mutual",
+      "name": "Market HMO Bronze 7500",
+      "metal": "Bronze",
+      "type": "HMO",
+      "premium": 1290,
+      "deductible": 15000,
+      "oopMax": 18400,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "not-covered"
+      }
+    },
+    {
+      "id": "oh-osc-brz",
+      "issuer": "Oscar",
+      "name": "Bronze Classic",
+      "metal": "Expanded Bronze",
+      "type": "EPO",
+      "premium": 1330,
+      "deductible": 14500,
+      "oopMax": 18400,
+      "hsaEligible": false,
+      "referralRequired": false,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-cs-slv",
+      "issuer": "CareSource",
+      "name": "Marketplace Silver",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1598,
+      "deductible": 11000,
+      "oopMax": 18000,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 2,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 35,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 80,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 45,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 90,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 90,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "out",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-ant-slv",
+      "issuer": "Anthem",
+      "name": "Silver Pathway X 5000",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1672,
+      "deductible": 10000,
+      "oopMax": 17400,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 65,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 15,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "labs": {
+          "copay": 40,
+          "afterDeductible": false
+        },
+        "imaging": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-mm-slv",
+      "issuer": "Medical Mutual",
+      "name": "Market HMO Silver 4500",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1640,
+      "deductible": 9000,
+      "oopMax": 17000,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 65,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 15,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "labs": {
+          "copay": 40,
+          "afterDeductible": false
+        },
+        "imaging": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "not-covered"
+      }
+    },
+    {
+      "id": "oh-osc-slv",
+      "issuer": "Oscar",
+      "name": "Silver Classic",
+      "metal": "Silver",
+      "type": "EPO",
+      "premium": 1655,
+      "deductible": 9500,
+      "oopMax": 18000,
+      "hsaEligible": false,
+      "referralRequired": false,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 35,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 80,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 45,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 90,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 90,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-ant-gld",
+      "issuer": "Anthem",
+      "name": "Gold Pathway X 1500",
+      "metal": "Gold",
+      "type": "HMO",
+      "premium": 1920,
+      "deductible": 3000,
+      "oopMax": 14000,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 45,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 10,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "labs": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "imaging": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    },
+    {
+      "id": "oh-osc-gld",
+      "issuer": "Oscar",
+      "name": "Gold Classic",
+      "metal": "Gold",
+      "type": "EPO",
+      "premium": 1885,
+      "deductible": 3000,
+      "oopMax": 15000,
+      "hsaEligible": false,
+      "referralRequired": false,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 55,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 10,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 55,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "chen": "in",
+        "walsh": "in"
+      },
+      "drugs": {
+        "albuterol": "covered",
+        "symbicort": "covered"
+      }
+    }
+  ]
+}

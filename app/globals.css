@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+/*
+ * Fitting Room tokens, taken from thatch.com.
+ *
+ * Thatch publishes its design tokens as CSS custom properties on the marketing
+ * site (the "warm" palette, "slab" radii and elevations, brand red #F31616).
+ * These are those values, renamed for the roles they play here. Where a Thatch
+ * value fails WCAG AA for text, the nearest step in Thatch's own scale is used
+ * and the brand value is kept for fills and hovers.
+ *
+ * Type: Thatch sets headlines in Selecta (licensed) at weight 500 with -1%
+ * tracking, and also loads Inter. Inter stands in for Selecta here.
+ *
+ * Contrast (checked): --ink-dim on --bg 5.0:1 and on --sunken 4.8:1, --ink-muted 7.3:1,
+ * --good on --good-soft 6.2:1, --bad on --bad-soft 6.9:1, --warn on --warn-soft 6.4:1,
+ * --accent-ink on --accent 4.7:1.
+ */
+:root {
+  color-scheme: light;
+
+  /* Surfaces: warm-gray-50 page, white cards, the site's section tint for wells. */
+  --bg: #fcfbf8;
+  --raised: #ffffff;
+  --sunken: #f8f4ee;
+  --well: #f0eee8; /* warm-gray-100 */
+  --line: rgb(57 56 51 / 0.1); /* warm-gray-transparent-100 */
+  --line-strong: rgb(43 27 6 / 0.2); /* Thatch's secondary-button border */
+
+  /* Text: Thatch's warm near-black for headings, warm-gray-700/600 for secondary. */
+  --ink: #261703;
+  --ink-body: #1f1e1a; /* warm-gray-900 */
+  --ink-muted: #55544e; /* warm-gray-700 */
+  --ink-dim: #6e6c65; /* between warm-gray-600 and 700: 600 is 4.45:1 on the section tint */
+
+  /* Brand red. #F31616 is Thatch's; the fill is one step deeper so 18px button text passes AA. */
+  --brand: #f31616;
+  --accent: #e81414;
+  --accent-hover: #f31616;
+  --accent-text: #d41212;
+  --accent-soft: #ffe8e7; /* warm-red-100 */
+  --accent-ink: #fcfbf8;
+
+  /* Semantic, from Thatch's warm scales. */
+  --good: #006625; /* warm-green-700 */
+  --good-fill: #27ac4d; /* warm-green-500 */
+  --good-soft: #def6e0; /* warm-green-100 */
+  --warn: #794600; /* warm-orange-700 */
+  --warn-soft: #ffebd9; /* warm-orange-100 */
+  --bad: #8a3335; /* warm-red-700 */
+  --bad-soft: #ffe8e7; /* warm-red-100 */
+
+  --bronze: #cd7a05; /* warm-orange-500 */
+  --silver: #b4b2a9; /* warm-gray-400 */
+  --gold: #e6c420; /* warm-yellow-400 */
+  --platinum: #7e7dff; /* warm-indigo-500 */
+
+  --dark: #1f1e1a; /* warm-gray-900 */
+  --dark-raised: #393833; /* warm-gray-800 */
+  --on-dark: #fcfbf8;
+  --on-dark-muted: #cdcbc4; /* warm-gray-300 */
+
+  /* slab-elevation-* */
+  --shadow-card: 0 1.13px 4.51px 0 rgb(48 43 40 / 0.08);
+  --shadow-float: 0 4.51px 18.02px 0 rgb(48 43 40 / 0.12), 0 2.25px 4.51px 0 rgb(48 43 40 / 0.07);
+  --shadow-overlay: 0 13.52px 36.04px 0 rgb(48 43 40 / 0.14), 0 3.38px 9.01px 0 rgb(48 43 40 / 0.08);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* easeOutQuint, also in Thatch's tokens */
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-raised: var(--raised);
+  --color-sunken: var(--sunken);
+  --color-well: var(--well);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-body: var(--ink-body);
+  --color-muted: var(--ink-muted);
+  --color-dim: var(--ink-dim);
+  --color-brand: var(--brand);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-good: var(--good);
+  --color-good-fill: var(--good-fill);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-bronze: var(--bronze);
+  --color-silver: var(--silver);
+  --color-gold: var(--gold);
+  --color-platinum: var(--platinum);
+  --color-dark: var(--dark);
+  --color-dark-raised: var(--dark-raised);
+  --color-on-dark: var(--on-dark);
+  --color-on-dark-muted: var(--on-dark-muted);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-wordmark: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  /* slab-radius-* */
+  --radius-xs: 4px;
+  --radius-control: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-card: var(--shadow-card);
+  --shadow-float: var(--shadow-float);
+  --shadow-overlay: var(--shadow-overlay);
+}
+
+html {
+  background: var(--bg);
+  color: var(--ink-body);
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Money never jitters. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thatch's eyebrow: medium, wide-tracked, uppercase, brand red. */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.eyebrow-quiet {
+  color: var(--ink-dim);
+}
+
+/* Thatch's headline setting: medium weight, -1% tracking, tight leading. */
+.display {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  color: var(--ink);
+}
+
+/* The wordmark: Thatch sets it in Montserrat with wide tracking. */
+.wordmark {
+  font-family: var(--font-wordmark);
+  font-weight: 700;
+  letter-spacing: 0.27em;
+  text-transform: uppercase;
+}
+
+/* A card: white, hairline, slab-elevation-card. */
+.card {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+/* Thatch's buttons: pills, 18px, regular weight, -0.027em tracking. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  letter-spacing: -0.027em;
+  line-height: 1;
+  padding: 0.875rem 1.5rem;
+  transition:
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out),
+    color 150ms var(--ease-out);
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.btn-dark {
+  background: var(--ink-body);
+  color: var(--bg);
+}
+.btn-dark:hover {
+  background: var(--dark-raised);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-secondary:hover {
+  background: var(--well);
+}
+.btn-sm {
+  font-size: 0.9375rem;
+  padding: 0.625rem 1.125rem;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* Horizontal scroll areas on small screens keep their edge fade. */
+.fade-x {
+  mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+}
+
+/* Motion is opt-out by OS preference. Motion library reads this too. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

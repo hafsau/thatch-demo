@@ -1,0 +1,755 @@
+{
+  "personaId": "dennis",
+  "source": "representative",
+  "planYear": 2026,
+  "plans": [
+    {
+      "id": "az-amb-brz",
+      "issuer": "Ambetter from Arizona Complete Health",
+      "name": "Everyday Bronze",
+      "metal": "Expanded Bronze",
+      "type": "HMO",
+      "premium": 846,
+      "deductible": 7500,
+      "oopMax": 9200,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "out",
+        "reyes": "in"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-bcbs-brz",
+      "issuer": "Blue Cross Blue Shield of Arizona",
+      "name": "Blue ACA Bronze",
+      "metal": "Bronze",
+      "type": "HMO",
+      "premium": 892,
+      "deductible": 7000,
+      "oopMax": 9200,
+      "hsaEligible": true,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "specialist": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "emergency": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "in"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-osc-brz",
+      "issuer": "Oscar",
+      "name": "Bronze Classic",
+      "metal": "Expanded Bronze",
+      "type": "HMO",
+      "premium": 868,
+      "deductible": 7250,
+      "oopMax": 9200,
+      "hsaEligible": false,
+      "referralRequired": false,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "out"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-ban-brz",
+      "issuer": "Banner|Aetna",
+      "name": "Bronze Banner Plus",
+      "metal": "Bronze",
+      "type": "HMO",
+      "premium": 859,
+      "deductible": 7400,
+      "oopMax": 9200,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "out"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-uhc-brz",
+      "issuer": "UnitedHealthcare",
+      "name": "Bronze Essential",
+      "metal": "Bronze",
+      "type": "HMO",
+      "premium": 905,
+      "deductible": 7500,
+      "oopMax": 9200,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "mentalHealthOutpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "genericRx": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.4,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "unknown",
+        "reyes": "in"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "not-covered"
+      }
+    },
+    {
+      "id": "az-amb-slv",
+      "issuer": "Ambetter from Arizona Complete Health",
+      "name": "Clear Silver",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1118,
+      "deductible": 5500,
+      "oopMax": 9000,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 35,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 80,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 45,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 90,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 90,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "out",
+        "reyes": "in"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-bcbs-slv",
+      "issuer": "Blue Cross Blue Shield of Arizona",
+      "name": "Blue ACA Silver",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1174,
+      "deductible": 4800,
+      "oopMax": 9100,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 65,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 15,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "labs": {
+          "copay": 40,
+          "afterDeductible": false
+        },
+        "imaging": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "in"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-ban-slv",
+      "issuer": "Banner|Aetna",
+      "name": "Silver Banner Plus",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1139,
+      "deductible": 5000,
+      "oopMax": 9000,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 65,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 30,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 15,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 75,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        },
+        "labs": {
+          "copay": 40,
+          "afterDeductible": false
+        },
+        "imaging": {
+          "coinsurance": 0.3,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "out"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-osc-slv",
+      "issuer": "Oscar",
+      "name": "Silver Classic",
+      "metal": "Silver",
+      "type": "HMO",
+      "premium": 1152,
+      "deductible": 5000,
+      "oopMax": 9000,
+      "hsaEligible": false,
+      "referralRequired": false,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 35,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 80,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 45,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 90,
+          "afterDeductible": true
+        },
+        "urgentCare": {
+          "copay": 90,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.35,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "out"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-bcbs-gld",
+      "issuer": "Blue Cross Blue Shield of Arizona",
+      "name": "Blue ACA Gold",
+      "metal": "Gold",
+      "type": "HMO",
+      "premium": 1338,
+      "deductible": 1200,
+      "oopMax": 7500,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 4,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 45,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 10,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 50,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "labs": {
+          "copay": 20,
+          "afterDeductible": false
+        },
+        "imaging": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "in"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    },
+    {
+      "id": "az-ban-gld",
+      "issuer": "Banner|Aetna",
+      "name": "Gold Banner Plus",
+      "metal": "Gold",
+      "type": "HMO",
+      "premium": 1305,
+      "deductible": 1000,
+      "oopMax": 7900,
+      "hsaEligible": false,
+      "referralRequired": true,
+      "nationalNetwork": false,
+      "qualityRating": 3,
+      "costSharing": {
+        "primaryCare": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "specialist": {
+          "copay": 55,
+          "afterDeductible": false
+        },
+        "mentalHealthOutpatient": {
+          "copay": 25,
+          "afterDeductible": false
+        },
+        "genericRx": {
+          "copay": 10,
+          "afterDeductible": false
+        },
+        "preferredBrandRx": {
+          "copay": 55,
+          "afterDeductible": false
+        },
+        "urgentCare": {
+          "copay": 60,
+          "afterDeductible": false
+        },
+        "emergency": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "inpatient": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "outpatientSurgery": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "labs": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        },
+        "imaging": {
+          "coinsurance": 0.2,
+          "afterDeductible": true
+        }
+      },
+      "providers": {
+        "nakamura": "in",
+        "reyes": "out"
+      },
+      "drugs": {
+        "atorvastatin": "covered",
+        "eliquis": "covered"
+      }
+    }
+  ]
+}
