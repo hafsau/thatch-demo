@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { rankPlans, type SortKey } from "@/lib/cost/estimate";
 import { PERSONAS, personaById, utilizationFor, type Persona } from "@/lib/personas";
@@ -16,11 +16,9 @@ import { WhatsLeftStep } from "@/components/whats-left-step";
 
 const ORDER = STEPS.map((s) => s.id);
 
-/** Reads the household from the URL and remounts the flow when it changes. */
-export function FittingRoom() {
+/** The household comes from the URL via the server page; changing it remounts the flow. */
+export function FittingRoom({ personaId }: { personaId: string }) {
   const router = useRouter();
-  const params = useSearchParams();
-  const personaId = params.get("as") ?? "maya";
   const persona = useMemo(() => (PERSONAS.some((p) => p.id === personaId) ? personaById(personaId) : PERSONAS[0]), [personaId]);
   const changePersona = (id: Persona["id"]) => router.replace(id === "maya" ? "/" : `/?as=${id}`, { scroll: false });
   const file = plansFor(persona.id);
